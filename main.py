@@ -52,7 +52,7 @@ HEADERS = {'accept': '*/*',
            'x-hd-dc': 'origin'}
 
 
-def generate_form_data(search_item_id, store_id, start_index):
+def generate_form_data(search_item_id: str, store_id: str, start_index: int) -> dict:
     """
     Separate out the generation of form data to make the main block of code more readable.
 
@@ -87,7 +87,7 @@ def generate_form_data(search_item_id, store_id, start_index):
     }
 
 
-def parse_useful_attributes(item):
+def parse_useful_attributes(item: dict) -> dict:
     """
     Given a raw item response from the GraphQL API, parse out the relevant attributes we're interested in and generate
     a simple dictionary.
